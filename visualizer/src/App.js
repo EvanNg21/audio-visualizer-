@@ -1,24 +1,50 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import Search from './Search';
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <BrowserRouter>
+
+    <nav className='navbar'>
+      <div className='navbar-container'>
+        <a href="/" className='navbar-logo'>
+          Neon Waves <i className='fab fa-typo3' />
         </a>
-      </header>
-    </div>
+        <div className='menu-icon'>
+
+        </div>
+        <u1>
+        <li className='nav-item'>
+            <a href="/" className="nav-links">
+              Home 
+            </a>
+          </li>
+          <li className='nav-item'>
+            <a href="/Search" className="nav-links">
+              Search 
+            </a>
+          </li>
+        </u1>
+      </div>
+    </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Search" element={<Search />} />
+        </Routes>
+    </BrowserRouter>
+  );
+}
+
+function Home() {
+  return (
+
+      <div className="home-container">
+      <h1 class = 'center'>
+        AUDIO VISUALIZATION
+      </h1>
+      </div>
+
   );
 }
 
