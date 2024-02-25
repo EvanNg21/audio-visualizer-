@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Search from './Search';
+import Visualizer from './visualizer';
 function App() {
   
   return (
@@ -9,10 +10,10 @@ function App() {
     <nav className='navbar'>
       <div className='navbar-container'>
         <a href="/" className='navbar-logo'>
-          Neon Waves <i className='fab fa-typo3' />
+          Neon Waves  <i className='fab fa-typo3' />
         </a>
-        <div className='menu-icon'>
-
+        <div className='visual'>
+          <Visualizer/>
         </div>
         <u1>
         <li className='nav-item'>

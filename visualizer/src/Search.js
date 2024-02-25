@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios'; // Import axios
 
 const Search = () => {
@@ -39,7 +39,7 @@ const Search = () => {
                 {searchResults.map(song => (
                     <div key={song.id} className='song'>
                         <p>Track: {song.title} Artist: {song.artist.name}</p>
-                        <img src={song.album.cover_medium} alt={song.title}/>
+                        <img src={song.album.cover_small} alt={song.title}/>
                     <audio controls>
                         <source src={song.preview} type="audio/mp3" />
                         Your browser does not support the audio element.
